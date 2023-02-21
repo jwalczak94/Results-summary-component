@@ -16,6 +16,8 @@ fetch(summaryData)
       resultBox.classList.add("results", "text-lead");
 
       resultBox.appendChild(icon).setAttribute("src", `${results.icon}`);
+      resultBox.appendChild(icon).setAttribute("alt", " ");
+      resultBox.appendChild(icon).setAttribute("aria-hidden", true);
       resultBox.appendChild(category).textContent = results.category;
       resultBox.appendChild(result).textContent = results.score;
       result.appendChild(maxResult).textContent = "/100";
