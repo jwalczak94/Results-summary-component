@@ -211,7 +211,11 @@ span > span {
 .btn {
   display: inline-block;
 
-  background: var(--dark-navy);
+  background-color: var(--dark-navy);
+  background-image: var(--gradient-1);
+  background-position: -290px 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
   border: none;
   border-radius: 8rem;
   color: #fff;
@@ -223,11 +227,7 @@ span > span {
   width: 100%;
 
   cursor: pointer;
-  transition: all 0.3s;
-}
-
-.btn:hover {
-  background: var(--gradient-1);
+  transition: all 0.3s ease-in;
 }
 
 @media (min-width: 900px) {
@@ -260,4 +260,21 @@ span > span {
   .btn {
     margin-top: 0.8125rem;
   }
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    background-position: 0 0;
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
